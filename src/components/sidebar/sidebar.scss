@@ -1,0 +1,87 @@
+/** @format */
+
+.sidebar {
+  flex: 1;
+  border-right: 0.6px solid rgb(240, 232, 232);
+  min-height: 100vh;
+
+  .top {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: rgb(27, 134, 118);
+    }
+  }
+  hr {
+    height: 0;
+    border: 0.6px solid rgb(240, 232, 232);
+  }
+
+  .center {
+    padding-left: 12px;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      .title {
+        font-size: 14px;
+        font-weight: bold;
+        color: rgb(10, 149, 151);
+        margin-top: 15px;
+        margin-bottom: 8px;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        padding: 8px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgb(244, 238, 238);
+        }
+
+        .icon {
+          font-size: 20px;
+          color: rgb(21, 103, 106);
+        }
+
+        span {
+          font-size: 15px;
+          font-weight: 600;
+          color: rgb(105, 102, 102);
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+  .bottom {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+
+    .colorOption {
+      width: 25px;
+      height: 25px;
+      border-radius: 5px;
+      border: 1px solid rgb(157, 152, 152);
+      cursor: pointer;
+      margin: 3px;
+
+      &:nth-child(1) {
+        background-color: rgb(227, 226, 222);
+      }
+
+      &:nth-child(2) {
+        background-color: rgb(33, 31, 29);
+      }
+    }
+  }
+}

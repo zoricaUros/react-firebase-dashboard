@@ -1,0 +1,79 @@
+.featureChart {
+    flex: 2;
+    box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.36);
+        -webkit-box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.36);
+        -moz-box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.36);
+        padding: 15px;
+
+        .top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: grey;
+        }
+
+        .bottom {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+
+            .featureChartDisplay{
+                width: 100px;
+                height: 100px;
+            }
+
+            .title {
+                font-weight: 500;
+                color: grey;
+               
+            }
+
+            .amount {
+                font-size: 30px;
+                
+            }
+
+            .desc {
+                font-weight: 400;
+                font-size: 14px;
+                color: grey;
+                text-align: center;
+                
+            }
+
+            .summary {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+               
+                .item {
+                    text-align: center;
+
+                    .itemTitle {
+                            color: grey;
+                            font-size: 14px;
+                            
+                        }
+                    
+                        .itemResult {
+                            display: flex;
+                            align-items: center;
+                            margin-top: 10px;
+                            font-size: 14px;
+
+                            &.positive {
+                                color: rgb(7, 114, 57);
+                            }
+
+                            &.negative {
+                                color: rgb(178, 18, 18);
+                            }
+                        }
+                }
+            }
+        }
+}
