@@ -16,8 +16,6 @@ export function Login() {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const handleClick = () => navigate("/");
-
   async function handleSubmit(e) {
     e.preventDefault();
 
@@ -25,7 +23,7 @@ export function Login() {
       setError("");
       setLoading(true);
       await login(emailRef.current.value, passwordRef.current.value);
-      navigate.push("/users");
+      navigate("/");
     } catch {
       setError("Something is wrong!");
     }
@@ -52,12 +50,7 @@ export function Login() {
                   <Form.Label>Password</Form.Label>
                   <Form.Control type='password' ref={passwordRef} required />
                 </Form.Group>
-                <Button
-                  disabled={loading}
-                  onClick={handleClick}
-                  className='w-100 mt-4'
-                  type='submit'
-                >
+                <Button disabled={loading} className='w-100 mt-4' type='submit'>
                   Log in
                 </Button>
               </Form>
