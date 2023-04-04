@@ -17,8 +17,6 @@ export function Signup() {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const handleClick = () => navigate("/users");
-
   async function handleSubmit(e) {
     e.preventDefault();
 
@@ -32,7 +30,7 @@ export function Signup() {
       setError("");
       setLoading(true);
       await signup(emailRef.current.value, passwordRef.current.value);
-      navigate.push("/users");
+      navigate("/");
     } catch {
       setError("Something is wrong!");
     }
@@ -66,12 +64,7 @@ export function Signup() {
                     required
                   />
                 </Form.Group>
-                <Button
-                  disabled={loading}
-                  onClick={handleClick}
-                  className='w-100 mt-4'
-                  type='submit'
-                >
+                <Button disabled={loading} className='w-100 mt-4' type='submit'>
                   Sign Up
                 </Button>
               </Form>
